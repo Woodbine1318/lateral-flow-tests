@@ -9,7 +9,7 @@ const BlogPostCard = ({ post, isEven, extended = false }) => {
       <ImagePostCard post={post} extended={extended} isEven={isEven} />
 
       <div className="flex-1">
-        {post.categories.map((category, i) => (
+        {post.categories?.map((category, i) => (
           <span
             className={`font-bold text-sm uppercase ${isEven ? 'text-primary' : 'text-secondary'} mr-2`}
             key={category.id}

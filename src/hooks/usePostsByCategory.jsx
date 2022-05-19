@@ -7,11 +7,6 @@ export const usePostsByCategory = (category) => {
         edges {
           node {
             slug
-            blog_post {
-              id
-              slug
-              title
-            }
           }
         }
       }

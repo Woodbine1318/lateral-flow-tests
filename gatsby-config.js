@@ -117,7 +117,7 @@ module.exports = {
                           excerpt(format: PLAIN, pruneLength: 260, truncate: true)
                         }
                       }
-                      cover {
+                      cover{
                         file {
                           url
                           details {

@@ -11,7 +11,11 @@ import { usePostsByCategory } from '../hooks/usePostsByCategory';
 
 const BlogPostTemplate = ({ location, data: { contentfulBlogPost: post, next, previous } }) => {
   const { link } = useSiteMetadata();
-  const categoryPosts = usePostsByCategory(post.categories[0].slug);
+  var category = usePostsByCategory()
+  if(post.categories){
+    category = usePostsByCategory(post.categories[0].slug);
+  }
+  const categoryPosts = category;
   const relatedPosts = categoryPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
   const disqusConfig = {
@@ -28,7 +32,7 @@ const BlogPostTemplate = ({ location, data: { contentfulBlogPost: post, next, pr
         og={{
           type: 'article',
           published_time: post.createdAt,
-          tags: [post.categories.map((c) => c.name)],
+          tags: [post.categories?.map((c) => c.name)],
         }}
         canonicalPath={location.pathname}
       />
@@ -40,7 +44,7 @@ const BlogPostTemplate = ({ location, data: { contentfulBlogPost: post, next, pr
       <section className="container grid grid-cols-1 px-8 mb-24 md:px-24 md:gap-x-24 md:grid-cols-4">
         <div className="flex flex-row flex-wrap items-start h-min mb-12 gap-2">
           <h2 className={`text-lg mb-6`}>{post.createdAt}</h2>
-          {post.categories.map((category) => (
+          {post.categories?.map((category) => (
             <span
               className="inline w-72 text-center border-4 border-black rounded-xl font-black uppercase py-3 px-2 mr-2 md:w-full"
               key={category.slug}

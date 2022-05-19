@@ -4,10 +4,10 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Micromobility News`,
-    description: `Micromobility News`,
-    author: `@micromobilitynews`,
-    siteUrl: `https://micromobilitynews.co.uk/`,
+    title: `Lateral Flow Tests`,
+    description: `Lateral Flow Tests`,
+    author: `@lateralflowtests`,
+    siteUrl: `https://lateralflowtests.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,7 +24,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Micromobility News`,
+        name: `Lateral Flow Tests`,
         short_name: `MMN`,
         start_url: `/`,
         background_color: `#663399`,
@@ -132,7 +132,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: 'Micromobility News',
+            title: 'Lateral Flow Tests',
           },
         ],
       },
@@ -163,7 +163,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `micromobility`,
+        shortname: `lateralflowtests`,
       },
     },
   ],

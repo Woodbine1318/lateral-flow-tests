@@ -1,7 +1,7 @@
 {
-  "name": "micro-mobility-news",
+  "name": "lateral-flow-tests",
   "private": true,
-  "description": "Micro Mobility News Website",
+  "description": "Lateral Flow Tests Website",
   "version": "1.0.0",
   "scripts": {
     "build": "gatsby build",

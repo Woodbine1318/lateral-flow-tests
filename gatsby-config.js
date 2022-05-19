@@ -24,7 +24,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Lateral Flow Tests`,
+        name: `LFT`,
         short_name: `MMN`,
         start_url: `/`,
         background_color: `#663399`,

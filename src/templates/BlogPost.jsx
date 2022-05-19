@@ -11,11 +11,7 @@ import { usePostsByCategory } from '../hooks/usePostsByCategory';
 
 const BlogPostTemplate = ({ location, data: { contentfulBlogPost: post, next, previous } }) => {
   const { link } = useSiteMetadata();
-  var category = usePostsByCategory()
-  if(post.categories){
-    category = usePostsByCategory(post.categories[0].slug);
-  }
-  const categoryPosts = category;
+  const categoryPosts = usePostsByCategory(post.categories ? post.categories[0].slug : undefined);
   const relatedPosts = categoryPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
   const disqusConfig = {

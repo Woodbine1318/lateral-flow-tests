@@ -28,10 +28,6 @@ const Footer = () => {
               </a>
             ),
           )}
-
-          <button className="text-left" onClick={() => setIsModalOpen(true)}>
-            Subscribe to the newsletter
-          </button>
         </nav>
 
         <div className="flex flex-row flex-nowrap justify-end px-12 lg:px-0">

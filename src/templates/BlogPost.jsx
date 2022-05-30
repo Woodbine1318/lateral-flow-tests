@@ -6,7 +6,7 @@ import { graphql, Link } from 'gatsby';
 import HeaderAlternate from '../components/HeaderAlternate';
 import ImagePost from '../components/ImagePost';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
-import { Disqus } from 'gatsby-plugin-disqus';
+// import { Disqus } from 'gatsby-plugin-disqus';
 import { usePostsByCategory } from '../hooks/usePostsByCategory';
 
 const BlogPostTemplate = ({ location, data: { contentfulBlogPost: post, next, previous } }) => {
@@ -55,7 +55,7 @@ const BlogPostTemplate = ({ location, data: { contentfulBlogPost: post, next, pr
       </section>
 
       <section className="container">
-        <Disqus config={disqusConfig} />
+        {/* <Disqus config={disqusConfig} /> */}
       </section>
 
       <nav className="container py-16 px-8">

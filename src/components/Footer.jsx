@@ -3,7 +3,6 @@ import React from 'react';
 import { useFooter } from '../hooks/useFooter';
 import Bike from '../assets/images/Bike.svg';
 import Scooter from '../assets/images/Scooter.svg';
-import NewsletterModal from './NewsletterModal';
 import { useState } from 'react';
 
 const Footer = () => {
@@ -35,14 +34,6 @@ const Footer = () => {
           <Scooter className="w-40 h-w-40 lg:w-56 lg:h-56" />
         </div>
       </footer>
-
-      {!hasSubscribed && (
-        <NewsletterModal
-          isOpen={isModalOpen}
-          onDismiss={() => setIsModalOpen(false)}
-          onSubscribe={() => setHasSubscribed(true)}
-        />
-      )}
     </>
   );
 };

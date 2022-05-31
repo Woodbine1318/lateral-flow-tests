@@ -18,16 +18,10 @@ const IndexPage = ({ location, data: { allContentfulBlogPost } }) => {
     <Layout>
       <SEO canonicalPath={location.pathname} />
 
-      <header className="container flex flex-row flex-nowrap justify-around items-center py-8 px-7 max-w-screen-xl mx-auto mb-14 md:justify-between">
-        <Bike className="w-40 h-w-40 hidden md:block md:w-48 md:h-48" />
-        <Scooter className="w-32 h-w-32 md:w-40 md:h-40" />
-
+      <header className="flex justify-center items-center min-w-max px-8 font-display text-lg">
         <Link to="/">
-          <Logo className="w-60" />
+          <h1 className="font-black text-2xl mb-16">Lateral Flow Tests</h1>
         </Link>
-
-        <Bike className="w-40 h-w-40 md:w-48 md:h-48" />
-        <Scooter className="w-32 h-w-32 hidden md:block md:w-40 md:h-40" />
       </header>
 
       <CategoryNav className="mb-24" />

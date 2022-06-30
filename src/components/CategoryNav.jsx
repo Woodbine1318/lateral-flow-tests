@@ -10,6 +10,9 @@ const CategoryNav = ({ className = '' }) => {
             id
             slug
             name
+            blog_post {
+              id
+            }
           }
         }
       }
